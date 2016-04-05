@@ -40,7 +40,7 @@
 
 
 			<div class="slides">
-				<section data-background="/lib/images/alex-maclean-2.png">
+				<section data-background="./lib/images/alex-maclean-2.png">
 					<h1 class="white">Cadasta</h1>
 					<h3 class="white">collecting, managing and visualizing property rights</h3>
 					<p>
@@ -58,7 +58,7 @@
 				</section>
 				<!-- Background -->
 				<section>
-					<section data-background="/lib/images/alex-maclean-4.png">
+					<section data-background="./lib/images/alex-maclean-4.png">
 						<h1 class="white">Background</h1>
 					</section>
 					<section>
@@ -73,33 +73,93 @@
 							<em>including surveyors, NGO administrators, policy makers etc.</em>
 						</li>
 						<li class="fragment highlight-blue">Allow for the tracking of three primary entities
-						<img data-src="/lib/images/3entities.png" alt="3 Entities" style="margin: 10px 0 -30px; width: 750px;" ></li>
+						<img data-src="./lib/images/3entities.png" alt="3 Entities" style="margin: 10px 0 -30px; width: 750px;" ></li>
 					</section>
 				</section>
 
 				<!--Tech Stack-->
 				<section>
-					<section data-background="/lib/images/alex-maclean-5.png">
+					<section data-background="./lib/images/alex-maclean-5.png">
 						<h1 class="white">Tech Stack</h1>
 					</section>
 					<section>
-						<img width="900" data-src="/lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
+						<img width="900" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
+
 					<section>
-						<h3>Snippet of Common JSON Format</h3>
-						<img width="900" data-src="/lib/images/CadastaCJFSpecData.png" alt="cadasta comon json format spec" >
+						<h3>Technical Requirements</h3>
+
+						<li>Open Source</li>
+						<li>Extensibility & Modernity</li>
+						<li>Localization</li>
+
 					</section>
+
 					<section>
-						<h3>Snippet of API Docs</h3>
-						<img width="900" data-src="/lib/images/APIDocsExample.png" alt="cadasta API Example" >
+						<h3>Cadasta Provider-</h3>
+
+						<li>Starting point for particular datasets</li>
+
+						<li>1. Harvest data</li>
+						<li>2. Transform into <a href="https://github.com/Cadasta/cadasta-cjf-spec">CJF</a> </li>
+						<li>Set of API Endpoints</li>
+						<li><a href="https://github.com/Cadasta/cadasta-provider-ona">ONA</a>, <a href="https://github.com/Cadasta/cadasta-provider-csv">CSV</a>, <a href="https://github.com/Cadasta/cadasta-provider-geojson">GeoJSON</a></li>
+						<li> &#60; insert your provider here /&#62; </li>
+
+					</section>
+
+					<section>
+						<img width="900" data-src="./lib/images/CadastaCJFSpecData.png" alt="cadasta comon json format spec" >
+					</section>
+
+					<section>
+						<h3><a href="https://github.com/Cadasta/cadasta-data-transformer">Cadasta Data Transformer</a></h3>
+
+						<li>API routes & controllers executing scripts/db functions</li>
+						<li>1. Ingest & interpret CJF</li>
+						<li>2. Extract parcels, parties, & relationships</li>
+						<li>3. Load into DB</li>
+
+					</section>
+
+					<section>
+						<h3><a href="https://github.com/Cadasta/cadasta-api">Cadasta API</a></h3>
+
+						<li>CRUD endpoints for business logic</li>
+						<li>include data-transformer, all providers as node modules</li>
+
+					</section>
+
+					<section>
+						<h3>API Docs</h3>
+						<img width="900" data-src="./lib/images/APIDocsExample.png" alt="cadasta API Example" >
+					</section>
+
+					<section>
+						<h3><a href="https://github.com/Cadasta/cadasta-db">Cadasta Database</a></h3>
+
+						<li>Cadasta Platform Business Logic</li>
+						<li>parcel (geometries), parties, relationships & history</li>
+						<li>survey questions & responses, organizations, projects, resources</li>
+
+					</section>
+
+					<section>
+						<h3><a href="https://github.com/Cadasta/ckanext-project">Cadasta Platform</a></h3>
+
+						<li>Platform Application</li>
+						<li>Handles all user operations</li>
+						<li>Angular wrapped inside <a href="http://ckan.org/">CKAN</a></li>
+
 					</section>
 				</section>
+
 				<!-- Demo -->
 				<section>
-					<section data-background="/lib/images/alex-maclean-6.png">
+					<section data-background="./lib/images/alex-maclean-6.png">
 						<h1 class="white">Demo</h1>
 					</section>
-					<section data-background-video="/lib/images/cadastaDemoVideo.mp4">
+					<section data-background-video="./lib/images/cadastaDemoVideo.mp4">
 					</section>
 					<section>
 						<p>To demo the platform, visit: <a href="http://cadasta.org/platform/">http://cadasta.org/platform/</a></p>
@@ -107,20 +167,20 @@
 					</section>
 					<section>
 						<h3> Sample List of Cadasta Organizations</h3>
-						<img width="900" data-src="/lib/images/organizationListExample.png" alt="cadasta platform organization list example" >
+						<img width="900" data-src="./lib/images/organizationListExample.png" alt="cadasta platform organization list example" >
 					</section>
 					<section>
 						<h3> Sample Details for a Cadasta Org</h3>
-						<img width="900" data-src="/lib/images/orgExample.png" alt="cadasta platform organization details example" >
+						<img width="900" data-src="./lib/images/orgExample.png" alt="cadasta platform organization details example" >
 					</section>
 					<section>
 						<h3> Sample List of Project Resources </h3>
-						<img width="900" data-src="/lib/images/resourceListExample.png" alt="cadasta resource list example for a project" >
+						<img width="900" data-src="./lib/images/resourceListExample.png" alt="cadasta resource list example for a project" >
 					</section>
 				</section>
 				<!-- Challenges & Opportunities -->
 				<section>
-					<section data-background="/lib/images/aerial_land.png">
+					<section data-background="./lib/images/aerial_land.png">
 						<h1 class="white">Challenges & Opportunities</h1>
 					</section>
 					<section>
@@ -139,12 +199,12 @@
 					</section>
 				</section>
 				<!-- Opportunities -->
-				<section data-background="/lib/images/alex-maclean-10.png">
+				<section data-background="./lib/images/alex-maclean-10.png">
 					<h1 class="white">Questions?</h1>
 				</section>
 				</section>
 				<!-- Thank you -->
-				<section data-background="/lib/images/alex-maclean-9.png" >
+				<section data-background="./lib/images/alex-maclean-9.png" >
 						<h1 class="white">Thank You</h1>
 				</section>
 
