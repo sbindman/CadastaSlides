@@ -37,7 +37,7 @@
 	<body>
 
 		<div class="reveal">
-
+			<img class="logo" width="100" src="./lib/images/logo.png" alt="SpatialDev Logo" >
 
 			<div class="slides">
 				<section data-background="./lib/images/alex-maclean-2.png">
@@ -50,11 +50,13 @@
 				</section>
 				<section>
 					<h2>Overview</h2>
-					<li class="fragment highlight-blue">Project Background</li>
-					<li class="fragment highlight-blue">Tech Stack</li>
-					<li class="fragment highlight-blue">Demo</li>
-					<li class="fragment highlight-blue">Challenges & Opportunities</li>
-					<li class="fragment highlight-blue">Questions</li>
+					<ul>
+						<li class="fragment highlight-current-blue"> Project Background</li>
+						<li class="fragment highlight-current-blue"> Tech Stack</li>
+						<li class="fragment highlight-current-blue"> Demo</li>
+						<li class="fragment highlight-current-blue"> Challenges & Opportunities</li>
+						<li class="fragment highlight-current-blue"> Questions</li>
+					</ul>
 				</section>
 				<!-- Background -->
 				<section>
@@ -62,17 +64,19 @@
 						<h1 class="white">Background</h1>
 					</section>
 					<section>
-					<h2>Our Client</h2>
-					<li class="fragment highlight-blue">The Cadasta Foundation is dedicated to developing tools for the collection and management of land-rights data</li>
-					<li class="fragment highlight-blue">Cadasta prioritizes using open source software and making all of their tools open source </li>
+					<h2>Cadasta</h2>
+						<ul>
+							<li>The Cadasta Foundation is dedicated to developing tools for the collection and management of land-rights data</li>
+							<li>Cadasta prioritizes using open source software and making all of their tools open source </li>
+						</ul>
 					</section>
 					<section>
 						<h2>Project Requirements</h2>
-						<li class="fragment highlight-blue">Enable permissioning for a wide range of platform users
+						<li>Enable permissioning for a wide range of platform users
 							<br>
 							<em>including surveyors, NGO administrators, policy makers etc.</em>
 						</li>
-						<li class="fragment highlight-blue">Allow for the tracking of three primary entities
+						<li>Allow for the tracking of three primary entities
 						<img data-src="./lib/images/3entities.png" alt="3 Entities" style="margin: 10px 0 -30px; width: 750px;" ></li>
 					</section>
 				</section>
@@ -88,69 +92,68 @@
 
 					<section>
 						<h3>Technical Requirements</h3>
-
-						<li>Open Source</li>
-						<li>Extensibility & Modernity</li>
-						<li>Localization</li>
-
+						<ul>
+							<li>Open Source</li>
+							<li>Extensibility & Modernity</li>
+							<li>Localization</li>
+						</ul>
 					</section>
 
 					<section>
-						<h3>Cadasta Provider-</h3>
+						<h3>Cadasta Provider</h3>
+						<ul>
+							<li>Starting point for particular datasets</li>
 
-						<li>Starting point for particular datasets</li>
-
-						<li>1. Harvest data</li>
-						<li>2. Transform into <a href="https://github.com/Cadasta/cadasta-cjf-spec">CJF</a> </li>
-						<li>Set of API Endpoints</li>
-						<li><a href="https://github.com/Cadasta/cadasta-provider-ona">ONA</a>, <a href="https://github.com/Cadasta/cadasta-provider-csv">CSV</a>, <a href="https://github.com/Cadasta/cadasta-provider-geojson">GeoJSON</a></li>
-						<li> &#60; insert your provider here /&#62; </li>
-
+							<li>1. Harvest data</li>
+							<li>2. Transform into <a href="https://github.com/Cadasta/cadasta-cjf-spec">CJF</a> </li>
+							<li>Set of API Endpoints</li>
+							<li><a href="https://github.com/Cadasta/cadasta-provider-ona">ONA</a>, <a href="https://github.com/Cadasta/cadasta-provider-csv">CSV</a>, <a href="https://github.com/Cadasta/cadasta-provider-geojson">GeoJSON</a></li>
+							<li> &#60; insert your provider here /&#62; </li>
+						</ul>
 					</section>
 
 					<section>
+						<h3>Example Common JSON Format Snippet</h3>
 						<img width="900" data-src="./lib/images/CadastaCJFSpecData.png" alt="cadasta comon json format spec" >
 					</section>
 
 					<section>
 						<h3><a href="https://github.com/Cadasta/cadasta-data-transformer">Cadasta Data Transformer</a></h3>
-
-						<li>API routes & controllers executing scripts/db functions</li>
-						<li>1. Ingest & interpret CJF</li>
-						<li>2. Extract parcels, parties, & relationships</li>
-						<li>3. Load into DB</li>
-
+						<ul>
+							<li>API routes & controllers executing scripts/db functions</li>
+							<li>1. Ingest & interpret CJF</li>
+							<li>2. Extract parcels, parties, & relationships</li>
+							<li>3. Load into DB</li>
+						</ul>
 					</section>
 
 					<section>
 						<h3><a href="https://github.com/Cadasta/cadasta-api">Cadasta API</a></h3>
-
-						<li>CRUD endpoints for business logic</li>
-						<li>include data-transformer, all providers as node modules</li>
-
+						<ul>
+							<li>CRUD endpoints for business logic</li>
+							<li>include data-transformer, all providers as node modules</li>
+						</ul>
 					</section>
-
-					<section>
-						<h3>API Docs</h3>
-						<img width="900" data-src="./lib/images/APIDocsExample.png" alt="cadasta API Example" >
-					</section>
-
 					<section>
 						<h3><a href="https://github.com/Cadasta/cadasta-db">Cadasta Database</a></h3>
-
-						<li>Cadasta Platform Business Logic</li>
-						<li>parcel (geometries), parties, relationships & history</li>
-						<li>survey questions & responses, organizations, projects, resources</li>
-
+						<ul>
+							<li>Cadasta Platform Business Logic</li>
+							<li>parcel (geometries), parties, relationships & history</li>
+							<li>survey questions & responses, organizations, projects, resources</li>
+						</ul>
 					</section>
 
 					<section>
 						<h3><a href="https://github.com/Cadasta/ckanext-project">Cadasta Platform</a></h3>
-
-						<li>Platform Application</li>
-						<li>Handles all user operations</li>
-						<li>Angular wrapped inside <a href="http://ckan.org/">CKAN</a></li>
-
+						<ul>
+							<li>Platform Application</li>
+							<li>Handles all user operations</li>
+							<li>Angular wrapped inside <a href="http://ckan.org/">CKAN</a></li>
+						</ul>
+					</section>
+					<section>
+						<h3>API Docs</h3>
+						<img width="900" data-src="./lib/images/APIDocsExample.png" alt="cadasta API Example" >
 					</section>
 				</section>
 
@@ -162,7 +165,7 @@
 					<section data-background-video="./lib/images/cadastaDemoVideo.mp4">
 					</section>
 					<section>
-						<p>To demo the platform, visit: <a href="http://cadasta.org/platform/">http://cadasta.org/platform/</a></p>
+						<p>To demo the platform, visit: <a href="http://cadasta.org/platform/">www.cadasta.org/platform/</a></p>
 						<br>
 					</section>
 					<section>
@@ -185,17 +188,21 @@
 					</section>
 					<section>
 						<h2>Lessons Learned</h2>
-						<li class="fragment highlight-blue">The more moving parts there are, the more resources are required</li>
-						<li class="fragment highlight-blue">Thoroughly research open-source libraries</li>
-						<li class="fragment highlight-blue">Testing testing testing</li>
+						<ul>
+							<li >Managing moving parts</li>
+							<li >Thoroughly research open-source libraries</li>
+							<li >Testing testing testing</li>
+							</ul>
 					</section>
 					<section>
 						<h2>Opportunities</h2>
-						<li class="fragment highlight-blue"> All of the Cadasta code is opensource and can be found at <a>www.cadasta.org</a></li>
-						<li class="fragment highlight-blue">We would love to continue the dialog about how this software can be used for additional projects
-							<br>
-							Contact us at @spatialdev | @sbindman @danielduhh
-						</li>
+						<ul>
+							<li> All of the Cadasta code is opensource and can be found at <a href="https://github.com/Cadasta">www.github.com/Cadasta</a></li>
+							<li> We would love to continue the dialog about how this software can be used for additional projects
+								<br>
+								Contact us at <a href="https://twitter.com/SpatialDev?lang=en">@spatialdev</a> | <a href="http://spatialdev.com/#contact">www.spatialdev.com</a>
+							</li>
+						</ul>
 					</section>
 				</section>
 				<!-- Opportunities -->
