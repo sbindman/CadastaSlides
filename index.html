@@ -37,7 +37,7 @@
 	<body>
 
 		<div class="reveal">
-			<img class="logo" width="100" src="./lib/images/logo.png" alt="SpatialDev Logo" >
+			<img class="logo" width="150" src="./lib/images/logo.png" alt="SpatialDev Logo" >
 
 			<div class="slides">
 				<section data-background="./lib/images/alex-maclean-2.png">
@@ -64,18 +64,28 @@
 						<h1 class="white">Background</h1>
 					</section>
 					<section>
-					<h2>Cadasta</h2>
+					<h2>The Cadasta Foundation</h2>
+					<ul>
+						<li>Cadasta is building technology that enable property rights to be documented and administered by the communities that own them, in conjunction with government land agencies</li>
+					</ul>
+				</section>
+					<section>
+						<h2>Why do land rights matter?</h2>
 						<ul>
-							<li>The Cadasta Foundation is dedicated to developing tools for the collection and management of land-rights data</li>
-							<li>Cadasta prioritizes using open-source software and making all of their tools open-source </li>
+							<li>"The right to property – land and resources – is the foundation for economic security"</li>
+							<li>Formalized land rights are correlated with:</li>
+							<ul>
+								<li>Higher land productivity</li>
+								<li>Improved resilience after natural disasters</li>
+							</ul>
 						</ul>
+						<img data-src="./lib/images/resilience.png" alt="Disaster Resilience" style="width: 600px; position: absolute; right: -488px; top: 30px; opacity: 1;"></li>
+						<img data-src="./lib/images/productivity.png" alt="Land Productivity" style="width: 500px; position: absolute; right: -318px; top: 340px; opacity: 1;"></li>
+
 					</section>
 					<section>
 						<h2>Project Overview</h2>
-						<!--<li>Enable permissioning for a wide range of platform users-->
-							<!--<br>-->
-							<!--<em>including surveyors, NGO administrators, policy makers etc.</em>-->
-						<!--</li>-->
+
 						<li>Allow for the tracking of three primary entities
 						<img data-src="./lib/images/3entities.png" alt="3 Entities" style="margin: 10px 0 -30px; width: 750px;" ></li>
 					</section>
@@ -110,21 +120,19 @@
 							<li><a href="https://github.com/Cadasta/cadasta-provider-ona">ONA</a>, <a href="https://github.com/Cadasta/cadasta-provider-csv">CSV</a>, <a href="https://github.com/Cadasta/cadasta-provider-geojson">GeoJSON</a></li>
 							<li> &#60; insert your provider here /&#62; </li>
 						</ul>
+						<img width="400" style=" right: -100px; position: absolute;" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
-
-					<section>
-						<h3>Common JSON Format:</h3>
-						<img width="900" data-src="./lib/images/CadastaCJFSpecData.png" alt="cadasta comon json format spec" >
-					</section>
-
 					<section>
 						<h3><a href="https://github.com/Cadasta/cadasta-data-transformer">Cadasta Data Transformer</a></h3>
 						<ul>
 							<li>API routes & controllers executing scripts/db functions</li>
-							<li>1. Ingest & interpret CJF</li>
-							<li>2. Extract parcels, parties, & relationships</li>
-							<li>3. Load into DB</li>
+							<ul>
+								<li>Ingest & interpret CJF</li>
+								<li>Extract parcels, parties, & relationships</li>
+								<li>Load into DB</li>
+							</ul>
 						</ul>
+						<img width="400" style=" right: -100px; top:400px; position: absolute;" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
 
 					<section>
@@ -133,6 +141,7 @@
 							<li>CRUD endpoints for business logic</li>
 							<li>include data-transformer, all providers as node modules</li>
 						</ul>
+						<img width="400" style=" right: -100px; top:280px; position: absolute;" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
 					<section>
 						<h3><a href="https://github.com/Cadasta/cadasta-db">Cadasta Database</a></h3>
@@ -141,8 +150,8 @@
 							<li>parcel (geometries), parties, relationships & history</li>
 							<li>survey questions & responses, organizations, projects, resources</li>
 						</ul>
+						<img width="400" style=" right: -100px; position: absolute;" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
-
 					<section>
 						<h3><a href="https://github.com/Cadasta/ckanext-project">Cadasta Platform</a></h3>
 						<ul>
@@ -150,10 +159,10 @@
 							<li>Handles all user operations</li>
 							<li>Angular wrapped inside <a href="http://ckan.org/">CKAN</a></li>
 						</ul>
+						<img width="400" style=" right: -100px; position: absolute;" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
 					<section>
-						<h3>API Docs</h3>
-						<img width="900" data-src="./lib/images/APIDocsExample.png" alt="cadasta API Example" >
+						<img width="900" data-src="./lib/images/cadastArchitecture.png" alt="cadasta Architecture drawing" >
 					</section>
 				</section>
 
@@ -167,18 +176,6 @@
 					<section>
 						<p>To demo the platform, visit: <a href="http://cadasta.org/platform/">www.cadasta.org/platform/</a></p>
 						<br>
-					</section>
-					<section>
-						<h3> Sample List of Cadasta Organizations</h3>
-						<img width="900" data-src="./lib/images/organizationListExample.png" alt="cadasta platform organization list example" >
-					</section>
-					<section>
-						<h3> Sample Details for a Cadasta Org</h3>
-						<img width="900" data-src="./lib/images/orgExample.png" alt="cadasta platform organization details example" >
-					</section>
-					<section>
-						<h3> Sample List of Project Resources </h3>
-						<img width="900" data-src="./lib/images/resourceListExample.png" alt="cadasta resource list example for a project" >
 					</section>
 				</section>
 				<!-- Challenges & Opportunities -->
@@ -205,10 +202,27 @@
 						</ul>
 					</section>
 				</section>
-				<!-- Opportunities -->
-				<section data-background="./lib/images/alex-maclean-10.png">
-					<h1 class="white">Questions?</h1>
-				</section>
+				<!-- Questions -->
+				<section>
+					<section data-background="./lib/images/alex-maclean-10.png">
+						<h1 class="white">Questions?</h1>
+					</section>
+					<section>
+						<h3>Common JSON Format:</h3>
+						<img width="900" data-src="./lib/images/CadastaCJFSpecData.png" alt="cadasta comon json format spec" >
+					</section>
+					<section>
+						<h3> Sample List of Cadasta Organizations</h3>
+						<img width="900" data-src="./lib/images/organizationListExample.png" alt="cadasta platform organization list example" >
+					</section>
+					<section>
+						<h3> Sample Details for a Cadasta Org</h3>
+						<img width="900" data-src="./lib/images/orgExample.png" alt="cadasta platform organization details example" >
+					</section>
+					<section>
+						<h3> Sample List of Project Resources </h3>
+						<img width="900" data-src="./lib/images/resourceListExample.png" alt="cadasta resource list example for a project" >
+					</section>
 				</section>
 				<!-- Thank you -->
 				<section data-background="./lib/images/alex-maclean-9.png" >
